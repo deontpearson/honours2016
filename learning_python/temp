@@ -1,0 +1,77 @@
+# returns if a number is a palindrome
+paliList = []
+rangelist = []
+lastPaliIndex = 0
+value = 0
+
+def isPalindrome(num):
+	numStr = str(num)
+	revNumStr = ''
+	for i in reversed(numStr):
+		revNumStr += str(i)
+	if numStr == revNumStr:
+		return True
+	else:
+		return False
+# finds all the palindromes in a given range
+def findPalindromesInRange(number):
+	count = 1
+	while count < value:
+		if isPalindrome(count):
+ 			paliList.append(count)
+		count += 1
+
+def findNextPalindrome(currentNum):
+	global lastPaliIndex
+	if currentNum in paliList :
+		lastPaliIndex = paliList.index(currentNum)
+		return currentNum
+	else :
+		return paliList[lastPaliIndex + 1]
+
+def distanceFromNextPalindrome(currentNum):
+	return findNextPalindrome(currentNum) - currentNum
+
+def doWork():
+	total = 0
+	count = 1
+	while count < value:
+		if count == paliList[len(paliList)-1]:
+			break
+		else:
+			total += distanceFromNextPalindrome(count)
+		count += 1
+	return total
+
+if __name__ == "__main__":
+	value = 10 ** input("Enter max number> ")
+	#rangeList = range(1,value)
+
+	findPalindromesInRange(value)
+
+	print doWork()
+	# print "distance from next pali %d " % distanceFromNextPalindrome(11)
+	#print sumOfDistance(value)
+******************************************************************************************************
+
+
+    '''
+    def distanceToNextPalindrome(start, end):
+    	top = end - start
+    	bottom = 0
+    	if top == 1 :
+    		return 1
+    	else :
+    		distance = ((top + bottom)/2) * (top + 1)
+    	return distance
+
+    def sumOfDistance(value):
+    	total = 0
+    	count = 1
+    	for i in palindromes :
+    		if palindromes.index(i) == len(palindromes) - 1:
+    			return total
+    		else :
+    			total += distanceToNextPalindrome (i + 1, palindromes[palindromes.index(i) + 1])
+    	return total
+    '''

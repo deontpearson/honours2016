@@ -8,7 +8,6 @@ Modules are added with:
 import moduleName
 ```
 If statements are functions, they need indentation too
-```python
 if condition :
   statement
 ```
@@ -19,6 +18,15 @@ myParams = { key1: value1, \
              key3:value3 \
              }
 ```
+Mathematical Operators
+|Operator	|Action		|
+|---------------|---------------|
+|"+, *, /, -"	|Standard Ops	|
+|%		|Modulus	|
+|**		|To the power	|
+|"+=, /=, *=, -=|num = num op num|
+
+
 ## Variables
 ----
 + Variables declarations do not technically exist.
@@ -35,6 +43,27 @@ variable1 = ('a','b','c')
 (x,y,z) = v # assign each element of v to a different variable, x = 'a', y = 'b', z = 'c'
 
 ```
+## Boolean Logic
+----
+### Equality:
+```python
+print 1 == 1 # true
+print 1 is 1 # true
+temp = "hello world"
+print temp is "hello" # true
+print temp == "hello" # true
+```
+
+### Inequality:
+```python
+print 1 is not 1 # false
+print 1 is not 2 # true
+print 1 != 2 # true
+print not (1 is 2) # true
+```
+### Rest:
++ ">, <"
++ ">=, <="
 
 ## Functions
 ----
@@ -46,7 +75,15 @@ Functions have a built in attributes accessed like:
 __doc__ # will return the description
 __name__ # will return the name of the function eg: __main__
 ```
+Functions are not limited by the input types
+```python
+def printSomething(x)
+  print "the input is %s" % (x,)
 
+printSomething("hello")
+printSomething(100)
+```
+All the above will print happily
 ## Strings
 ----
 ```python
@@ -55,9 +92,11 @@ many lines """
 ```
 ### Formating Strings
 Strings can be concatenated to other strings using the + but a string can not be added to another data type
+Numbers can be added to strings using type casting
 ```python
 print "I am adding to " + "this string" # is happy and moves on
-print "I am " + 25 +"years old" # fails to run str and int can not be added together
+print "I am " + 25 + "years old" # fails to run str and int can not be added together
+print "I am " + str(25) + "years old" # will run
 ```
 Place holders can be used to add variables into strings and perform type coercion
 ```python
@@ -76,6 +115,15 @@ myStr.split(";") # split the string on the ; outputting ["fname = deon", "sname 
 myStr.split(";", 1) # splits the string once then leaves the rest in the second element outputting ["fname = deo", "sname = pearson;age = 25"]
 ```
 
+### Slicing Strings
+```python
+temp = "this is a string"
+print temp[:4] # prints "this"
+firstBit = temp[:4] # assigns "this" to firstBit
+```
+### More String Operators
++ .find(item) - finds the first instance of a the occurance of item
+
 Numbers can be formated with decial values
 
 | Formate  | Input    | Output  |
@@ -83,6 +131,38 @@ Numbers can be formated with decial values
 | %f       | 50.1234  | 50.1234 |
 | %.2f     | 50.1234  | 50.12   |
 | %.2f     | 1.5      | 1.50    |
+
+## Statements
+----
+
+### If Statements
+```python
+if condition :
+  statement
+```
+### For Loops
+```python
+for item in list:
+  statement
+```
+### While Loop
+```python
+count = 0
+while (count < x)
+  statement
+ count += 1
+```
+### The in operator
+```python
+print "hello" in [1, 3, 4, "hello", 100] # prints true
+```
+
+### With Statement
+When there is two operations that need to execute together
+```python
+with open('filename') as name:
+  Statement
+```
 
 ## Dictionaries
 ----
@@ -114,6 +194,7 @@ listName[x:y] # gets a subset from x till y excluding y
 7. value in listName # returns true or false
 8. .remove(item) # removes the first occurance of item
 9. .pop() # pops the last element of the list and returns it
+10. range(start, end) # generates a list of integers from start to end
 ```
 
 ### List Operators:
@@ -148,3 +229,15 @@ Accessing and element from a tuple is done the same as a lilt:
 ```python
 tupleName[element] # returns the item at that element
 ```
+## File Handling
+ ```python
+ open(name, mode, buffering)
+ ```
+ + name is the file name to open
+ + mode indicates how the file will opened
+    + 'r' read from a file
+    + 'w' write to a file
+ + sets the desired buffer size
+    + 0 means no buffering
+    + +n buffers to a size n
+    + -n use the system default
