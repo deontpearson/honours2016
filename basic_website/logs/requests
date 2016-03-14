@@ -1,0 +1,8 @@
+
+g13p1006-1.ict.ru.ac.za|11/Mar/2016 14:28:49|"GET /index HTTP/1.1" 200 -
+g13p1006-1.ict.ru.ac.za|11/Mar/2016 14:28:57|"GET /admin HTTP/1.1" 200 -
+g13s4603-1.ict.ru.ac.za|11/Mar/2016 14:33:59|"GET / HTTP/1.1" 200 -
+g13p1006-1.ict.ru.ac.za|11/Mar/2016 14:34:22|"GET /cow_goes_moo$php HTTP/1.1" 200 -
+g13s4603-1.ict.ru.ac.za|14/Mar/2016 07:46:36|"GET /admin HTTP/1.1" 200 -
+g13s4603-1.ict.ru.ac.za|14/Mar/2016 07:46:37|"GET /favicon.ico HTTP/1.1" 200 -
+g13s4603-1.ict.ru.ac.za|14/Mar/2016 07:46:37|"GET /favicon.ico HTTP/1.1" 200 -
