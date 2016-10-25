@@ -1,0 +1,6 @@
+198.154.63.50 - - [13/Oct/2016:05:40:57 +0152] "GET /w00tw00t.at.blackhats.romanian.anti-sec:) HTTP/1.1" - -
+198.154.63.50 - - [13/Oct/2016:05:40:58 +0152] "GET /phpMyAdmin/scripts/setup.php HTTP/1.1" - -
+198.154.63.50 - - [13/Oct/2016:05:40:58 +0152] "GET /phpmyadmin/scripts/setup.php HTTP/1.1" - -
+198.154.63.50 - - [13/Oct/2016:05:40:59 +0152] "GET /pma/scripts/setup.php HTTP/1.1" - -
+198.154.63.50 - - [13/Oct/2016:05:41:00 +0152] "GET /myadmin/scripts/setup.php HTTP/1.1" - -
+198.154.63.50 - - [13/Oct/2016:05:41:00 +0152] "GET /MyAdmin/scripts/setup.php HTTP/1.1" - -

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Reporting</title>
+    </head>
+    <body>
+        <p><h2>Available Reports</h2></p>
+        {{reports|safe}}
+        <form action='' method=GET>
+          <input type='text' name='report' placeholder='Report Number'>
+          <input type='Submit' name='View' value='View'>
+        </form>
+<!--
+        <h2>Reports</h2>
+        {{result|safe}}
+      -->
+    </body>
+</html>

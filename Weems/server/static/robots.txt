@@ -1,0 +1,12 @@
+# robots.txt file for webpage
+
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /print/
+Disallow: /lib/
+Disallow: /rd/
+Disallow: /tools/
+Disallow: /tmp/
+Disallow: /*?
+Disallow: /results.html

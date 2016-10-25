@@ -1,0 +1,58 @@
+#!/bin/bash
+# chkconfig: 2345 20 80
+# service script for running the honeypot instance
+# must edit the service.sh file in the honeypot folder with settings for the instance
+
+# making the hoeypot run as a service
+#   1- sudo cp ./honeypot /etc/init.d/
+#   2- sudo chmod 755 /etc/init.d/honeypot
+#   3- sudo update-rc.d honeypot defaults
+#   3- sudo reboot
+
+# Source function library.
+#. /etc/init.d/functions
+DIR=~/GitHub/honeypot/server
+
+start() {
+    # code to start app comes here
+    # example: daemon program_name &
+    # Builds the main.py file with custom modules, then runs the main.py file
+    sudo $DIR/service.sh > /tmp/honeypot.log 2>&1
+    #python $DIR/build.py
+    #python $DIR/server.py -i 146.231.123.9 -p 80 &> /tmp/honeypot.log
+}
+
+stop() {
+    # code to stop app comes here
+    # example: killproc program_name
+    PID="$(pgrep python)"
+    if [ $PID ]; then
+      echo "Killing process $PID"
+      kill $PID
+      echo "Done"
+    else
+      echo 'Not Running'
+    fi
+    #echo $PID
+}
+
+case "$1" in
+    start)
+       start
+       ;;
+    stop)
+       stop
+       ;;
+    restart)
+       stop
+       start
+       ;;
+    status)
+       # code to check status of app comes here
+       # example: status program_name
+       ;;
+    *)
+       echo "Usage: $0 {start|stop|status|restart}"
+esac
+
+exit 0

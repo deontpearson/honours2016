@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Search Users</title>
+    </head>
+    <body>
+        <p><h2>User ID</h2></p>
+        <form name="frmSearch" method="GET" action="/results.html">
+            <input type="text" name="id">
+            <input type="submit"value="Search" name="Search">
+        </form>
+        <div id='results'>
+          <p>{{result}}</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+     38 59.46.14.235 "GET /scripts/setup.php
+      6 59.46.14.235 "GET /phpmyadmin/scripts/setup.php
+      4 59.46.14.235 "GET /index.php
+      2 59.46.14.235 "GET /setup.php
+      2 59.46.14.235 "GET /pma/scripts/setup.php
+      2 59.46.14.235 "GET /phpMyAdmin/scripts/setup.php
+      2 59.46.14.235 "GET /muieblackcat

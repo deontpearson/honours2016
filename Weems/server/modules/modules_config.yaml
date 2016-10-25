@@ -1,0 +1,66 @@
+# Created by Deon Pearson
+# Rhodes University Computer Science Honours 2016
+
+root_handler:
+  path: modules/root_handler
+  method: GET
+  key: /
+  handler: rootHandler
+  reg_exp: r'^/$'
+  admin: false
+file_upload_handler:
+  path: modules/file_upload_handler
+  method: GET
+  key: upload
+  reg_exp: r'^upload$'
+  handler: fileUploadHandler
+  admin: false
+wp_admin_handler:
+  path: modules/wp_admin_handler
+  method: GET
+  key: wp-admin
+  reg_exp: r'^wp-admin'
+  handler: wordPressAdminHandler
+  admin: false
+wp_login_handler:
+  path: modules/wp_login_handler
+  method: GET
+  key: wp-login.php
+  reg_exp: r'^wp-login.php'
+  handler: wordPressLoginHandler
+  admin: false
+reporting_handler:
+  path: modules/reporting_handler
+  method: GET
+  key: a62ae1c57d16eedbdba51dbf8a247988/reports # MD5(ADMIN_IP)
+  reg_exp: r'^a62ae1c57d16eedbdba51dbf8a247988/reports'
+  handler: reportingHandler
+  admin: true
+sqli_handler:
+  path: modules/sqli_handler
+  method: GET
+  key: results.html
+  reg_exp: r'^results.html$'
+  handler: sqliHandler
+  admin: false
+robots_handler:
+  path: modules/robots_handler
+  method: GET
+  key: robots.txt
+  reg_exp: r'^robots.txt^'
+  handler: robotsHandler
+  admin: false
+rfi_handler:
+  path: modules/rfi_handler
+  method: GET
+  key: rfi
+  reg_exp: r'(.*)http://(.*)', r'(.*)ftp://(.*)', r'(.*)https://(.*)' #http, ftp, https
+  handler: rfiHandler
+  admin: false
+hello_world_handler:
+  path: modules/hello_world_module
+  method: GET
+  key: helloworld
+  reg_exp: r'^helloworld$'
+  handler: helloWorldHandler
+  admin: false

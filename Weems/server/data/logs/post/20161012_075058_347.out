@@ -1,0 +1,21 @@
+Referer: http://146.231.123.9:8080/wp-login.php
+Content-Length: 71
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0
+Connection: keep-alive
+Cookie: _js_datr=VhrtV2DVPastVxN5S7__FIaA
+Host: 146.231.123.9:8080
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+
+
+Args:
+ImmutableMultiDict([])
+Form:
+ImmutableMultiDict([('pwd', u'deon'), ('wp-submit', u'Log In'), ('testcookie', u'1'), ('log', u'deon'), ('redirect_to', u'wp-admin/')])
+Data:
+
+File:
+ImmutableMultiDict([])

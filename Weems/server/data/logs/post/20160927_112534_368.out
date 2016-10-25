@@ -1,0 +1,20 @@
+Referer: http://146.231.123.9/upload
+Content-Length: 3862
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0
+Connection: keep-alive
+Host: 146.231.123.9
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Content-Type: multipart/form-data; boundary=---------------------------3680286633207517491725068276
+Accept-Encoding: gzip, deflate
+
+
+Args:
+ImmutableMultiDict([])
+Form:
+ImmutableMultiDict([('submit', u'Upload')])
+Data:
+
+File:
+ImmutableMultiDict([('file', <FileStorage: u'test' ('application/octet-stream')>)])

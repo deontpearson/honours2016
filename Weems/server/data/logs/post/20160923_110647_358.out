@@ -1,0 +1,17 @@
+Content-Length: 144
+User-Agent: python-requests/2.9.1
+Connection: keep-alive
+Host: 146.231.123.9
+Accept: */*
+Content-Type: multipart/form-data; boundary=6d807dc262c2444da427d744c1c3f962
+Accept-Encoding: gzip, deflate
+
+
+Args:
+ImmutableMultiDict([])
+Form:
+ImmutableMultiDict([])
+Data:
+
+File:
+ImmutableMultiDict([('file', <FileStorage: u'test.txt' (None)>)])

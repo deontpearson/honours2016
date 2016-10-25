@@ -1,0 +1,50 @@
+version: 1
+disable_existing_loggers: false
+formatters:
+  detailed:
+    format: '%(asctime)s %(module)-17s line:%(lineno)-4d %(levelname)-8s %(message)s'
+handlers:
+  access_log:
+    class: logging.handlers.WatchedFileHandler
+    filename: '/tmp/log'
+    #formatter: simple
+    level: INFO
+  console:
+    class: logging.StreamHandler
+    formatter: detailed
+    level: DEBUG
+    stream: 'ext://sys.stdout'
+  error_log:
+    class: logging.handlers.RotatingFileHandler
+    filename: '/tmp/log'
+    #formatter: simple
+    level: ERROR
+  request_log:
+    class: logging.handlers.WatchedFileHandler
+    filename: '/tmp/log'
+    #formatter: simple
+    level: INFO
+  post_log:
+    class: logging.handlers.WatchedFileHandler
+    filename: '/tmp/log'
+    level: INFO
+loggers:
+  access_log:
+    handlers: [access_log]
+    level: INFO
+    propagate: true
+  console_log:
+    handlers: [console]
+    level: DEBUG
+  error_log:
+    handlers: [error_log]
+    level: ERROR
+    propagate: true
+  request_log:
+    handlers: [request_log]
+    level: INFO
+    propagate: true
+  post_log:
+    handlers: [post_log]
+    level: INFO
+    propagate: true
